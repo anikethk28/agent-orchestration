@@ -1,6 +1,6 @@
-# ⚡ AgentOS — Multi-Agent Orchestration Platform
+# ⚡ AgentOS Multi-Agent Orchestration Platform
 
-A production-grade multi-agent orchestration system built with **LangGraph**, **FastAPI**, and **Streamlit**. Submit any complex task and watch a team of AI agents decompose, research, analyze, write, and synthesize a final answer — with full observability and human-in-the-loop review.
+A production-grade multi-agent orchestration system built with **LangGraph**, **FastAPI**, and **Streamlit**. Submit any complex task and watch a team of AI agents decompose, research, analyze, write, and synthesize a final answer with full observability and human-in-the-loop review.
 
 ![Submit Task](docs/screenshots/submit.png)
 
@@ -13,7 +13,7 @@ A production-grade multi-agent orchestration system built with **LangGraph**, **
 | **Multi-Agent Graph** | Supervisor → Researcher → Analyst → Writer → Coder → Reviewer pipeline built on LangGraph |
 | **Human-in-the-Loop (HITL)** | Agents pause and escalate to a human review queue when confidence is low |
 | **Tool Use** | Web search (DuckDuckGo), Python code execution, file read/write, database queries |
-| **Persistent Memory** | Semantic long-term memory via ChromaDB; short-term working memory via Redis |
+| **Persistent Memory** | Semantic long-term memory via ChromaDB short-term working memory via Redis |
 | **Full Observability** | OpenTelemetry tracing, per-agent latency, token + cost metrics |
 | **Dark Glassmorphism UI** | Streamlit frontend with animated gradient orbs, glass cards, timeline trace explorer |
 | **Local Dev Mode** | Runs without Docker using `fakeredis` and background threads instead of Celery |
@@ -34,7 +34,7 @@ Track real-time status with auto-refresh. View the synthesized final output when
 ![Task Monitor](docs/screenshots/monitor.png)
 
 ### Trace Explorer
-Inspect every agent LLM call, tool invocation, and decision — with per-event latency and a visual timeline.
+Inspect every agent LLM call, tool invocation, and decision with per-event latency and a visual timeline.
 
 ![Trace Explorer](docs/screenshots/trace.png)
 
@@ -43,10 +43,6 @@ Agents escalate here when they need a human decision before proceeding.
 
 ![Review Queue](docs/screenshots/review.png)
 
-### System Health
-Live infrastructure status — Redis, ChromaDB, PostgreSQL — plus per-tool usage stats.
-
-![System Health](docs/screenshots/health.png)
 
 ---
 
@@ -79,7 +75,7 @@ Live infrastructure status — Redis, ChromaDB, PostgreSQL — plus per-tool usa
 
 ---
 
-## 🚀 Quick Start (Local — No Docker)
+## 🚀 Quick Start 
 
 ### Prerequisites
 - Python 3.11+
@@ -131,7 +127,7 @@ PYTHONPATH=. python scripts/local_server.py
 ```
 
 This starts FastAPI at **http://localhost:8000** with:
-- In-memory Redis (`fakeredis`) — no Redis install required
+- In-memory Redis (`fakeredis`) no Redis install required
 - Background threads instead of Celery workers
 
 ### 4. Start the UI
@@ -164,7 +160,7 @@ docker-compose up --build
 
 ## 🧪 Run the CLI Demo
 
-Test the agent graph directly from the terminal (no UI needed):
+Test the agent graph directly from the terminal:
 
 ```bash
 PYTHONPATH=. python scripts/demo.py
